@@ -1,0 +1,38 @@
+.socials {
+  @extend %reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials__link {
+  @extend %reset-link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  &--light-theme {
+    color: var(--icon-cl);
+
+    transition: color var(--animation), background-color var(--animation);
+  }
+
+  &--light-theme:hover {
+    color: var(--main-light);
+    background-color: var(--accent-cl);
+  }
+
+  &--dark-theme {
+    color: var(--main-light);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color var(--animation);
+  }
+
+  &--dark-theme:hover {
+    background-color: var(--accent-cl);
+  }
+}

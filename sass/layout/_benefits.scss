@@ -1,0 +1,42 @@
+.benefits {
+  @include section;
+
+  &__list {
+    @extend %reset-list;
+    --items: 1;
+
+    @media screen and (min-width: $tablet) {
+      --items: 2;
+    }
+
+    @media screen and (min-width: $desktop) {
+      --items: 4;
+    }
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+
+    background-color: var(--light-bg-cl);
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+
+    @include fonts(14px, 16px, 700);
+    text-transform: uppercase;
+
+    @media screen and(max-width: calc($tablet - 1px)) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include fonts(14px, 24px);
+    color: var(--secondary-font-cl);
+  }
+}

@@ -1,0 +1,105 @@
+.mobile-menu {
+  display: flex;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+
+    background-color: var(--main-light);
+
+    transition: opacity var(--animation), visibility var(--animation);
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__socials {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media screen and (max-width: calc($mobile - 1px)) {
+      gap: 5px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu__link {
+  @extend %reset-link;
+  @include fonts(18px, 22px, 500, 0.02em);
+  color: var(--accent-cl);
+
+  display: flex;
+  gap: 10px;
+
+  @media screen and (max-width: calc($mobile - 1px)) {
+    @include fonts(12px, 22px, 500, 0.02em);
+    gap: 5px;
+  }
+
+  .mobile-menu__item:not(:last-child) &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.menu-btn {
+  z-index: 11;
+  display: inline-flex;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.icon-cross {
+  display: none;
+  .menu-btn.is-open & {
+    display: block;
+  }
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--accent-cl);
+  }
+}
+
+.icon-menu {
+  .menu-btn.is-open & {
+    display: none;
+  }
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--accent-cl);
+  }
+}

@@ -1,0 +1,18 @@
+.main-title {
+  @include fonts(26px, 42px, 900, 0.06em);
+  text-transform: uppercase;
+  color: var(--main-light);
+
+  @media screen and (min-width: $desktop) {
+    @include fonts(44px, 60px, 900, 0.06em);
+  }
+}
+
+.section-title {
+  @include fonts(28px, 33px, 700);
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    @include fonts(36px, 42px, 700);
+  }
+}

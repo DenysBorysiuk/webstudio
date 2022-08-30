@@ -1,0 +1,81 @@
+.footer {
+  @include section(60px);
+
+  background-color: var(--dark-bg-cl);
+
+  &__container {
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 93px;
+      text-align: left;
+    }
+  }
+
+  &__address-wrap {
+    @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+      margin-right: 175px;
+    }
+
+    @media screen and (max-width: calc($desktop - 1px)) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__logo {
+    @extend %reset-link;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @extend %reset-list;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__address {
+    @include fonts(14px, 24px);
+    font-style: normal;
+    text-decoration: none;
+    color: var(--main-light);
+  }
+
+  &__socials {
+    @media screen and (max-width: calc($tablet - 1px)) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 20px;
+
+    @include fonts(14px, 10px, 700);
+    text-transform: uppercase;
+    color: var(--main-light);
+  }
+}
+
+.footer__link {
+  @extend %reset-link;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}

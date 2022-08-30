@@ -1,0 +1,47 @@
+.agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+
+  &__text {
+    @include fonts(12px, 14px);
+    color: var(--secondary-font-cl);
+    user-select: none;
+
+    @media screen and (min-width: $desktop) {
+      @include fonts(14px, 24px);
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-underline-position: under;
+    color: var(--accent-cl);
+  }
+}
+
+.agreement__icon {
+  flex-shrink: 0;
+  transition: fill var(--animation);
+
+  .agreement__checkbox:hover + &,
+  .agreement__checkbox:focus + & {
+    fill: var(--accent-cl);
+  }
+}
+
+.agreement__checkbox:checked + .agreement__icon .agreement__icon-uncheck {
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.agreement__icon-check {
+  opacity: 0;
+  transition: opacity var(--animation);
+
+  .agreement__checkbox:checked + .agreement__icon & {
+    opacity: 1;
+  }
+}

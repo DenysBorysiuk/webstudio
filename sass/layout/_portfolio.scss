@@ -1,0 +1,38 @@
+.portfolio {
+  @include section;
+
+  &__filter {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      flex-wrap: wrap;
+      row-gap: 15px;
+      max-width: 326px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    @extend %reset-list;
+    --items: 1;
+
+    @media screen and (min-width: $tablet) {
+      --items: 2;
+    }
+
+    @media screen and (min-width: $desktop) {
+      --items: 3;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.logo {
+  @extend %reset-link;
+  font-family: var(--secondary-font);
+  color: var(--logo-dark-cl);
+  @include fonts(26px, 31px, 700);
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    @include fonts(24px, 28px, 700);
+  }
+
+  &--light {
+    color: var(--main-light);
+  }
+
+  &__text {
+    color: var(--accent-cl);
+  }
+}

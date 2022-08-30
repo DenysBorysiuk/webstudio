@@ -1,0 +1,33 @@
+.works {
+  @media screen and (max-width: calc($desktop - 1px)) {
+    display: none;
+  }
+  padding-bottom: 94px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    @extend %reset-list;
+  }
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    padding: 27px 82px;
+
+    @include fonts(14px, 16px, 700);
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

@@ -1,0 +1,80 @@
+.hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: var(--dark-bg-cl);
+
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+    url('../images/hero/hero-bg_sm@1x.jpg');
+
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+    -webkit-image-set(url('../images/hero/hero-bg_sm@1x.webp') 1x);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      url('../images/hero/hero-bg_sm@2x.jpg');
+
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      -webkit-image-set(url('../images/hero/hero-bg_sm@2x.webp') 2x);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      url('../images/hero/hero-bg_md@1x.jpg');
+
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      -webkit-image-set(url('../images/hero/hero-bg_md@1x.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+        url('../images/hero/hero-bg_md@2x.jpg');
+
+      background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+        -webkit-image-set(url('../images/hero/hero-bg_md@2x.webp') 2x);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      url('../images/hero/hero-bg_lg@1x.jpg');
+
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+      -webkit-image-set(url('../images/hero/hero-bg_lg@1x.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+        url('../images/hero/hero-bg_lg@2x.jpg');
+
+      background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+        -webkit-image-set(url('../images/hero/hero-bg_lg@2x.webp') 2x);
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.hero__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+}

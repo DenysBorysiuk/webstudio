@@ -1,0 +1,101 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    @media screen and (max-width: calc($tablet - 1px)) {
+      display: inline-flex;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 87px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
+  }
+
+  &__nav {
+    @media screen and (max-width: calc($tablet - 1px)) {
+      margin-bottom: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: auto;
+    }
+  }
+
+  &__contacts {
+    @extend %reset-list;
+    display: flex;
+    gap: 32px;
+    flex-direction: column-reverse;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      margin-bottom: 64px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    @media screen and (max-width: calc($tablet - 1px)) {
+      color: var(--accent-cl);
+    }
+
+    @media screen and (min-width: $mobile) and (max-width: calc($tablet - 1px)) {
+      @include fonts(34px, 40px, 500, 0.02em);
+    }
+  }
+}
+
+.header__link {
+  @extend %reset-link;
+
+  display: flex;
+
+  @include fonts(24px, 28px, 500, 0.02em);
+  color: var(--secondary-font-cl);
+
+  transition: color var(--animation);
+
+  @media screen and (min-width: $tablet) {
+    @include fonts(12px, 14px, 500, 0.02em);
+    align-items: center;
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    @include fonts(14px, 16px, 500, 0.02em);
+  }
+}

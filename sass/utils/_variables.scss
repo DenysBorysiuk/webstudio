@@ -1,0 +1,32 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* colors */
+  --main-light: #fff;
+  --accent-cl: #2196f3;
+
+  --main-font-cl: #212121;
+  --secondary-font-cl: #757575;
+
+  --dark-bg-cl: #2f303a;
+  --light-bg-cl: #f5f4fa;
+  --backdrop-bg-cl: rgba(0, 0, 0, 0.2);
+  --overlay-bg-cl: rgba(33, 150, 243, 0.9);
+
+  --icon-cl: #afb1b8;
+  --logo-dark-cl: #000000;
+  --hover-btn: #188ce8;
+  --hero-gradient: rgba(47, 48, 58, 0.4);
+
+  /* other   */
+  --indent: 30px;
+  --items: 3;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
