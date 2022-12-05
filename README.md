@@ -1,1 +1,5 @@
-HTML, CSS, JS, SAAS(SCSS), BEM
+Use HTML, CSS, JavaScript, SAAS(SCSS) preprocessor and BEM methodology  to build a website
+Layout is made relative to three transition points: 480px, 768px and 1200px.
+For writing styles, the Mobile First approach used.
+
+
