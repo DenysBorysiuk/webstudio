@@ -2,4 +2,4 @@ Use HTML, CSS, JavaScript, SAAS(SCSS) preprocessor and BEM methodology to build 
 
 Layout is made relative to three transition points: 480px, 768px and 1200px.
 
-For writing styles, the Mobile First approach used.
+For writing styles, used the Mobile First approach .
