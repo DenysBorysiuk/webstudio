@@ -85,23 +85,25 @@
           <h1 class="visually-hidden">Проекти</h1>
           <ul class="portfolio__filter filter">
             <li class="filter__item">
-              <button class="filter__btn filter__btn--current" type="button">Усі</button>
+              <button class="filter__btn filter__btn--current" type="button" data-filter="all">
+                Усі
+              </button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Веб-сайты</button>
+              <button class="filter__btn" type="button" data-filter="web">Веб-сайты</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Додатки</button>
+              <button class="filter__btn" type="button" data-filter="app">Додатки</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Дизайн</button>
+              <button class="filter__btn" type="button" data-filter="design">Дизайн</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Маркетинг</button>
+              <button class="filter__btn" type="button" data-filter="marketing">Маркетинг</button>
             </li>
           </ul>
           <ul class="portfolio__list card-set">
-            <li class="card card-set__item">
+            <li class="card card-set__item web">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -179,7 +181,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item design">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -257,7 +259,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item app">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -335,7 +337,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item marketing">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -413,7 +415,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item app">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -491,7 +493,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item web">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -569,7 +571,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item design">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -647,7 +649,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item marketing">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -725,7 +727,7 @@
               </a>
             </li>
 
-            <li class="card card-set__item">
+            <li class="card card-set__item app">
               <a href="" class="card__link">
                 <div class="card__thumb">
                   <picture>
@@ -889,5 +891,6 @@
     </footer>
 
     <script src="./js/menu.js"></script>
+    <script src="./js/filter.js" type="module"></script>
   </body>
 </html>
