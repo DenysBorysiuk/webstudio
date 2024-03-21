@@ -1,16 +1,16 @@
 # WebStudio 
 
-Used Technologies:
-HTML
-CSS
-SAAS(SCSS)
-JavaScript
-Features
-Layout is made relative to three transition points:
+## Used Technologies:
+- HTML
+- CSS
+- SAAS(SCSS)
+- JavaScript
 
-480px
-768px
-1200px.
-BEM methodology to build a website
+## Features
 
-For writing styles, used the Mobile First approach .
+- Layout is made relative to three transition points:
+ - 480px
+ - 768px
+ - 1200px.
+- BEM methodology to build a website
+- For writing styles, used the Mobile First approach .
